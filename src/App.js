@@ -13,7 +13,6 @@ import Writing from './Components/Pages/Projects/Writing';
 import WebDesign from './Components/Pages/Projects/WebDesign';
 import Building from './Components/Pages/Projects/Building';
 import Art from './Components/Pages/Projects/Art';
-import Footer from './Components/Other/Footer';
 
 function App() {
   return (
