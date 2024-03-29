@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+import NavBar from './Components/NavBar/NavBar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Components/Pages/Home';
+import About from './Components/Pages/About';
+import Recent from './Components/Pages/Recent';
+import Contact from './Components/Pages/Contact';
+import Projects from './Components/Pages/Projects/Projects';
+import Music from './Components/Pages/Projects/Music';
+import Writing from './Components/Pages/Projects/Writing';
+import WebDesign from './Components/Pages/Projects/WebDesign';
+import Building from './Components/Pages/Projects/Building';
+import Art from './Components/Pages/Projects/Art';
+import Footer from './Components/Other/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/about' exact element={<About />} />
+        <Route path='/recent' exact element={<Recent />} />
+        <Route path='/projects' exact element={<Projects />} />
+        <Route path='/music' exact element={<Music />} />
+        <Route path='/art' exact element={<Art />} />
+        <Route path='/writing' exact element={<Writing />} />
+        <Route path='/webdesign' exact element={<WebDesign />} />
+        <Route path='/building' exact element={<Building />} />
+        <Route path='/contact' exact element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
