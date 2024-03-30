@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Pages/Home';
 import About from './Components/Pages/About';
 import Recent from './Components/Pages/Recent';
-import Contact from './Components/Pages/Contact';
+import Waitlist from './Components/Pages/Waitlist/Waitlist';
 import Projects from './Components/Pages/Projects/Projects';
 import Music from './Components/Pages/Projects/Music';
 import Writing from './Components/Pages/Projects/Writing';
@@ -28,7 +28,7 @@ function App() {
         <Route path='/writing' exact element={<Writing />} />
         <Route path='/webdesign' exact element={<WebDesign />} />
         <Route path='/building' exact element={<Building />} />
-        <Route path='/contact' exact element={<Contact />} />
+        <Route path='/waitlist' exact element={<Waitlist />} />
       </Routes>
     </Router>
   );

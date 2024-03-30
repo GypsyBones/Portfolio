@@ -80,8 +80,8 @@ function NavBar () {
                                     {dropdown && <DropdownMenu />}
                                 </Dropdown>
                             </Col>
-                            <Col md="2">
-                                <Button href="/contact">
+                            <Col md="2" className="nav-item">
+                                <Button href="/waitlist" className="btn">
                                     Join the Waitlist!
                                 </Button>
                             </Col>
