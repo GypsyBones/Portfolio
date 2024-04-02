@@ -1,10 +1,17 @@
 import React from "react";
+import ComingSoon from "../../Components/Other/ComingSoon/ComingSoon";
+import Footer from "../Other/Footer/Footer";
 
 
 const Recent = () => {
     return (
       <div className="recent">
-        <h3>Latest Updates</h3>
+        <div className="recent-content">
+          <ComingSoon />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   };

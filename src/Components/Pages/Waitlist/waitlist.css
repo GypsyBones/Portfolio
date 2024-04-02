@@ -1,0 +1,41 @@
+
+
+.waitlist {
+    background-image: linear-gradient(var(--back) 55%, #000000);
+  }
+
+  .waitlist-landing {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(30deg, #93bdce 30%, #366e94);
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .waitlist-header {
+    font-size: 50px;
+    filter: drop-shadow(0 0 0.75rem #7c0763);
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    margin-left: 52%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  .waitlist-icon {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .formFacade {
+    background-image: linear-gradient(135deg, var(--back), #94364b);
+  }

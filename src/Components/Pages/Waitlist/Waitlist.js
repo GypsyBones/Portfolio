@@ -1,8 +1,9 @@
 import {React, useRef } from "react";
 import FormfacadeEmbed from "@formfacade/embed-react";
 
-import Footer from "../../Other/Footer";
+import Footer from "../../Other/Footer/Footer.js";
 import WaitlistButton from "./WaitlistButton";
+import './waitlist.css'
 
 
 
@@ -16,29 +17,33 @@ const Waitlist = () => {
 
   const ref = useRef(null);
   const scrollDown = () => {
-    ref.current?.scrollIntoView({block: "start", inline: "center", behavior: "smooth", duration: 2000})
+    //ref.current?.scrollIntoView({block: "start", inline: "center", behavior: "smooth", duration: 2000})
+    window.scrollTo(0, window.innerHeight*1)
   };
 
     return (
-      <div className="waitlist">
-        <div className="waitlist-landing">
-            <h1 className="waitlist-header">
-              Join the Waitlist
-            </h1>
-            <WaitlistButton scrollDown={scrollDown} />
-        </div>
-        <div ref={ref}>
-          <FormfacadeEmbed 
-            className="formFacade"
-            id="formFacade"
-            formFacadeURL={FORMFACADE_URL}
-            onSubmitForm={onSubmitForm}
-          />
+      <div>
+        <div className="waitlist">
+          <div className="waitlist-landing">
+              <h1 className="waitlist-header cinzel">
+                Join the Waitlist
+              </h1>
+              <WaitlistButton scrollDown={scrollDown} />
+          </div>
+          <div ref={ref}>
+            <FormfacadeEmbed 
+              className="formFacade"
+              id="formFacade"
+              formFacadeURL={FORMFACADE_URL}
+              onSubmitForm={onSubmitForm}
+            />
+          </div>
         </div>
         <div>
           <Footer />
         </div>
       </div>
+        
     );
   };
   

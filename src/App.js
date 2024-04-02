@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 
-import NavBar from './Components/NavBar/NavBar';
+import NavBar from './Components/Other/NavBar/NavBar.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Pages/Home';
 import About from './Components/Pages/About';
@@ -13,6 +13,7 @@ import Writing from './Components/Pages/Projects/Writing';
 import WebDesign from './Components/Pages/Projects/WebDesign';
 import Building from './Components/Pages/Projects/Building';
 import Art from './Components/Pages/Projects/Art';
+import Footer from './Components/Other/Footer/Footer.js';
 
 function App() {
   return (

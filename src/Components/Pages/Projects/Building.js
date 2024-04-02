@@ -1,10 +1,17 @@
 import React from "react";
+import ComingSoon from "../../Other/ComingSoon/ComingSoon";
+import Footer from "../../Other/Footer/Footer";
 
 
 const Building = () => {
     return (
       <div className="building">
-        <h3> Building </h3>
+        <div className="building-content">
+          <ComingSoon />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   };

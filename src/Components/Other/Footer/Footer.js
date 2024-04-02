@@ -1,7 +1,9 @@
 import { React, useState, useEffect } from "react";
+import { Row, Col } from 'react-bootstrap';
 import { MDBFooter, MDBContainer, MDBRow, MDBInput, MDBCol, MDBBtn } from 'mdb-react-ui-kit';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './footer.css'
 
 //Deployment ID = AKfycbwBIESj30EEYAp9_9MEElDV_jk05GDeuUjeJBnRQOasxn9UlyZ4u7sfizzpHKDM4FWo6A
 //web app url = https://script.google.com/macros/s/AKfycbwBIESj30EEYAp9_9MEElDV_jk05GDeuUjeJBnRQOasxn9UlyZ4u7sfizzpHKDM4FWo6A/exec
@@ -41,7 +43,7 @@ const Footer = () => {
             setValidation('none');
             setNameFill('none');
             setIsSubmit(false);
-            toast('Your Form has been Submitted!');
+            toast.success('Your Form has been Submitted!');
         }
     }, [validation, isSubmit]);
 //TODO - toast doesn't work
@@ -90,11 +92,10 @@ const Footer = () => {
         
     }
 
-//TODO - grey out text
-//TODO - change button colors
 //TODO - attach footer to bottom of page
     return (
-        <MDBFooter className='text-center text-white footer'>
+        <MDBFooter className='footer'>
+            <ToastContainer />
             <MDBContainer className='p-4 pb-0'><hr/>
                 <form onSubmit={(e)=>handleSubmit(e)}>
                     <MDBRow>
@@ -150,14 +151,20 @@ const Footer = () => {
                 </form>
             </MDBContainer>
             <MDBContainer>
-                <div className='text-center p-3'>
-                    © 2024 Copyright
-                </div>
-                <div>
-                    <a className='text-white' href='https://linktr.ee/sylviabones'>
-                        LinkTree
-                    </a>
-                </div>
+                <Row className="footer-text">
+                    <Col md="3" />
+                    <Col md="3">
+                        <p className='footer-text'>
+                            © 2024 Copyright
+                        </p>
+                    </Col>
+                    <Col md="1" >
+                        <a className='footer-text' href='https://linktr.ee/sylviabones'>
+                          LinkTree   
+                        </a>
+                    </Col>
+                    <Col md="5" />
+                </Row>
             </MDBContainer>
         </MDBFooter>
     );

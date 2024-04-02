@@ -4,10 +4,10 @@ import './nav.css';
 
 import DropdownMenu from './Dropdown.js';
 
-import Bars from '../Icons/icons8-menu-squared-50.png';
-import Close from '../Icons/icons8-close-50.png';
-import Down from '../Icons/icons8-chevron-down-50.png';
-import Up from '../Icons/icons8-chevron-up-50.png';
+import Bars from '../../Icons/icons8-menu-squared-50.png';
+import Close from '../../Icons/icons8-close-50.png';
+import Down from '../../Icons/icons8-chevron-down-50.png';
+import Up from '../../Icons/icons8-chevron-up-50.png';
 
 
 function NavBar () {
@@ -57,7 +57,7 @@ function NavBar () {
                             <Col md="3"  className="nav-item">
                                 <Nav.Link href='/recent' className="nav-links nav-i" onClick={closeMobileMenu}>Recent</Nav.Link>
                             </Col>
-                            <Col md="3" className="nav-item">
+                            <Col md="3" className="nav-item nav-i">
                                 <Dropdown className="nav-links">
                                     <Dropdown.Toggle
                                     className="nav-item-dropdown" 
@@ -81,7 +81,7 @@ function NavBar () {
                                 </Dropdown>
                             </Col>
                             <Col md="2" className="nav-item">
-                                <Button href="/waitlist" className="btn">
+                                <Button href="/waitlist" className="btn waitlist-btn">
                                     Join the Waitlist!
                                 </Button>
                             </Col>

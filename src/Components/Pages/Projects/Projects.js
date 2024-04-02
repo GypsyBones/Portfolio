@@ -1,10 +1,17 @@
 import React from "react";
+import ComingSoon from "../../Other/ComingSoon/ComingSoon";
+import Footer from "../../Other/Footer/Footer";
 
 
 const Projects = () => {
     return (
       <div className="projects">
-        <h3> Projects </h3>
+        <div className="projects-content">
+          <ComingSoon />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   };

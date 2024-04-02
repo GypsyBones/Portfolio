@@ -1,10 +1,16 @@
 import React from "react";
-
+import ComingSoon from "../../Components/Other/ComingSoon/ComingSoon";
+import Footer from "../Other/Footer/Footer";
 
 const Home = () => {
     return (
       <div className="home">
-        <h3>Home</h3>
+        <div className="home-content">
+          <ComingSoon />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   };

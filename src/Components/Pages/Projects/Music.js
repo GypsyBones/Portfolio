@@ -1,10 +1,17 @@
 import React from "react";
+import ComingSoon from "../../Other/ComingSoon/ComingSoon";
+import Footer from "../../Other/Footer/Footer";
 
 
 const Music = () => {
     return (
       <div className="music">
-        <h3>Music</h3>
+        <div className="music-content">
+          <ComingSoon />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   };
